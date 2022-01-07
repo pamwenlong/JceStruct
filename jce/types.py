@@ -630,7 +630,7 @@ class STRUCT_END(JceType):
 
     @classmethod
     def to_bytes(cls, jce_id: int, value: Any = None) -> bytes:
-        return cls.head_byte(jce_id, cls.__jce_type__[0])
+        return cls.head_byte(0, cls.__jce_type__[0])
 
     @classmethod
     def from_bytes(cls, data: bytes, **extra) -> Tuple[None, int]:
